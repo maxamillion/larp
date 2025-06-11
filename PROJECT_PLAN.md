@@ -14,7 +14,7 @@ To create a command-line RAG agent that can answer questions based on a collecti
 * **Agent Framework:** crewAI
 * **Document Ingestion:** LangChain, PyPDF
 * **Vector Database:** ChromaDB
-* **Local LLM Hosting:** Ollama
+* **Local LLM Hosting:** Ramalama
 
 ---
 
@@ -40,20 +40,20 @@ This project is broken down into four main phases. The estimated completion time
         langchain_community
         pypdf
         chromadb
-        ollama
+        ramalama
         ```
     * Install the libraries:
         ```bash
         pip install -r requirements.txt
         ```
 
-3.  **Set Up Local LLM with Ollama:**
-    * Download and install Ollama from the official website.
-    * Pull a local LLM. For this project, `llama3` is a good starting point:
+3.  **Set Up Local LLM with Ramalama:**
+    * Download and install Ramalama from the official website.
+    * Pull a local LLM. For this project, `qwen3:1.7b` is a good starting point:
         ```bash
-        ollama pull llama3
+        ramalama pull qwen3:1.7b
         ```
-    * Ensure the Ollama server is running.
+    * Ensure the Ramalama server is running.
 
 ---
 
@@ -87,7 +87,7 @@ In this phase, you'll create the main application file (`main.py`) where you def
     * **Role:** Define a role for the agent, such as "Document Analyst."
     * **Goal:** Set a clear goal, for example, "To analyze the provided documents and answer user questions based on their content."
     * **Backstory:** Provide a brief backstory to give the agent context.
-    * **LLM:** Assign your local Ollama LLM to the agent.
+    * **LLM:** Assign your local Ramalama LLM to the agent.
     * **Tools:** Equip the agent with the retriever tool you created.
 
 4.  **Define the Task:**
